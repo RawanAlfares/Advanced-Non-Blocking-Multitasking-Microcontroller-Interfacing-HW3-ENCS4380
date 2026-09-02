@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "author": "Rawan",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -20,
+      "left": 300,
+      "attrs": {
+        "pins": "rw"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 180,
+      "left": 300,
+      "attrs": {
+        "color": "green",
+        "label": "BUTTON 1 - INT0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 280,
+      "left": 300,
+      "attrs": {
+        "color": "red",
+        "label": "BUTTON 2 - INT1"
+      }
+    }
+  ],
+  "connections": [
+    ["uno:8", "lcd:RS", "green", []],
+    ["uno:9", "lcd:E", "green", []],
+    ["uno:10", "lcd:D4", "green", []],
+    ["uno:11", "lcd:D5", "green", []],
+    ["uno:12", "lcd:D6", "green", []],
+    ["uno:13", "lcd:D7", "green", []],
+
+    ["lcd:RW", "uno:GND.1", "black", []],
+    ["lcd:VSS", "uno:GND.1", "black", []],
+    ["lcd:VDD", "uno:5V", "red", []],
+
+    ["uno:2", "btn1:1.l", "blue", []],
+    ["btn1:2.l", "uno:GND.2", "black", []],
+
+    ["uno:3", "btn2:1.l", "blue", []],
+    ["btn2:2.l", "uno:GND.2", "black", []]
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "author": "ENCS4380 Q2",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "ledA",
+      "top": -100,
+      "left": 300,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resA",
+      "top": -100,
+      "left": 380,
+      "attrs": {
+        "value": "220"
+      }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "ledB",
+      "top": 0,
+      "left": 300,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resB",
+      "top": 0,
+      "left": 380,
+      "attrs": {
+        "value": "220"
+      }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "ledC",
+      "top": 100,
+      "left": 300,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resC",
+      "top": 100,
+      "left": 380,
+      "attrs": {
+        "value": "220"
+      }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "ledD",
+      "top": 200,
+      "left": 300,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resD",
+      "top": 200,
+      "left": 380,
+      "attrs": {
+        "value": "220"
+      }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "ledBonus",
+      "top": 300,
+      "left": 300,
+      "attrs": {
+        "color": "white"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resBonus",
+      "top": 300,
+      "left": 380,
+      "attrs": {
+        "value": "220"
+      }
+    },
+
+    {
+      "type": "wokwi-pushbutton",
+      "id": "button1",
+      "top": 100,
+      "left": 550,
+      "attrs": {
+        "color": "gray"
+      }
+    }
+  ],
+
+  "connections": [
+    [ "uno:D8", "ledA:A", "green", [] ],
+    [ "ledA:C", "resA:1", "green", [] ],
+    [ "resA:2", "uno:GND.1", "black", [] ],
+
+    [ "uno:D9", "ledB:A", "green", [] ],
+    [ "ledB:C", "resB:1", "green", [] ],
+    [ "resB:2", "uno:GND.1", "black", [] ],
+
+    [ "uno:D10", "ledC:A", "green", [] ],
+    [ "ledC:C", "resC:1", "green", [] ],
+    [ "resC:2", "uno:GND.1", "black", [] ],
+
+    [ "uno:D11", "ledD:A", "green", [] ],
+    [ "ledD:C", "resD:1", "green", [] ],
+    [ "resD:2", "uno:GND.1", "black", [] ],
+
+    [ "uno:D12", "ledBonus:A", "green", [] ],
+    [ "ledBonus:C", "resBonus:1", "green", [] ],
+    [ "resBonus:2", "uno:GND.1", "black", [] ],
+
+    [ "uno:D2", "button1:1.l", "blue", [] ],
+    [ "button1:2.l", "uno:GND.2", "black", [] ]
+  ]
+}

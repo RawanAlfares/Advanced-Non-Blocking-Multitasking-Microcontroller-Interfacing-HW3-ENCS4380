@@ -83,7 +83,7 @@ void lcd_init() {
     lcd_send_nibble(0x20);
     wait_us(150);
 
-    lcd_command(0x28);
+    lcd_command(0x28);  // 2 lines and 5*8 pixels
     lcd_command(0x08);  //display off
     lcd_command(0x01);  // clear display
     lcd_command(0x06);  //cursor moves to rights
@@ -94,8 +94,18 @@ void lcd_init() {
 void setup() {
     lcd_init();
 
-    lcd_setCursor(0, 0);
-    lcd_print("Rawan Abo ALRous");
+    //lcd_setCursor(0, 0);
+    //lcd_print("Rawan Abo ******");
+    lcd_command(0x01);          
+    wait_us(2000);             
+
+    lcd_setCursor(0, 0);       
+    lcd_print("Hello World!");
+
+    lcd_setCursor(0, 1);       
+    lcd_print("LCD Test OK");
+    wait_us(3000000);
+    lcd_command(0x01);
 }
 
 void loop() {
